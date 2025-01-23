@@ -12,8 +12,6 @@
 
 ## Demo video
 
-[Demo video](https://github.com/perisicnikola37/laravel-inertia-vue-spa/assets/79047182/38ffbb70-0543-495b-8211-ed5e17257ff2)
-
 ## Tests
 
 To get started with the tests, make sure you have enabled these extensions in your "php.ini" file if you are running the application on your local machine:
