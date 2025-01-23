@@ -6,6 +6,10 @@
     <img src="https://img.shields.io/badge/Composer-885630?style=for-the-badge&logo=Composer&logoColor=white" alt="Composer Badge" />
 </p>
 
+<center>
+<img src="https://img.shields.io/github/stars/perisicnikola37/laravel-inertiajs-vuejs-single-page-application" alt="Stars">
+</center>
+
 ## Demo video
 
 https://github.com/user-attachments/assets/a759bfbc-6c2e-46e0-8d3d-a627018b73df
