@@ -24,5 +24,5 @@ Code of Conduct
 Please review our code of conduct before participating in this project.
 
 Contact
-If you have any questions or need further assistance, you can reach out to us via email at nikola@e-invoices.online.
+If you have any questions or need further assistance, you can reach out to us via email at perisicnikola37@gmail.com
 
