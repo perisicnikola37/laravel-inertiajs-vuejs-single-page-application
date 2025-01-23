@@ -27,7 +27,8 @@ class RoleManagementTest extends TestCase
         $role = Role::factory()->create();
 
         $response = $this->put('/roles/' . $role->id, [
-            'name' => 'Updated role name']);
+            'name' => 'Updated role name'
+        ]);
 
         $this->assertDatabaseHas('roles', [
             'id' => $role->id,
@@ -90,5 +91,4 @@ class RoleManagementTest extends TestCase
 
         $response->assertSee(1);
     }
-
 }

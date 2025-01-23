@@ -8,8 +8,7 @@
       <directory suffix="Test.php">./tests/Feature</directory>
     </testsuite>
   </testsuites>
-  <php>
-    <env name="APP_ENV" value="testing"/>
+    <env name="APP_ENV" value="testing" force="true" />
     <env name="BCRYPT_ROUNDS" value="4"/>
     <env name="CACHE_DRIVER" value="array"/>
     <env name="DB_CONNECTION" value="sqlite"/>
@@ -18,7 +17,6 @@
     <env name="QUEUE_CONNECTION" value="sync"/>
     <env name="SESSION_DRIVER" value="array"/>
     <env name="TELESCOPE_ENABLED" value="false"/>
-  </php>
   <source>
     <include>
       <directory suffix=".php">./app</directory>
