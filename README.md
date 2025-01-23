@@ -14,6 +14,14 @@
 
 https://github.com/user-attachments/assets/a759bfbc-6c2e-46e0-8d3d-a627018b73df
 
+## Star History
+
+<p align="center">
+    <a href="https://star-history.com/#perisicnikola37/laravel-inertiajs-vuejs-single-page-application&Date">
+        <img height="400px" width="auto" src="https://api.star-history.com/svg?repos=perisicnikola37/laravel-inertiajs-vuejs-single-page-application&type=Date" alt="Star History Chart">
+    </a>
+</p>
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md) file for details.
