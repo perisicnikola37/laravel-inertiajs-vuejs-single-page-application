@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<phpcs>
+    <rule ref="PSR12"/>
+    <file name="app"/>
+    <file name="routes"/>
+    <file name="database"/>
+    <file name="tests"/>
+</phpcs>
