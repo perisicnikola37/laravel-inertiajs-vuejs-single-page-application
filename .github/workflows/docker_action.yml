@@ -7,6 +7,8 @@ on:
     paths:
       - 'Dockerfile'
       - 'docker-compose.yml'
+  pull_request:
+    branches: [ master ]
 
 jobs:
   build:
@@ -18,4 +20,4 @@ jobs:
 
       - name: Build and run Docker Compose
         run: |
-          docker-compose up --build -d
+          docker compose up --build -d

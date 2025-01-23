@@ -24,6 +24,8 @@ RUN composer install --no-scripts --no-autoloader
 
 COPY . .
 
+COPY .env.example .env
+
 RUN npm install
 RUN npm run build
 

@@ -27,12 +27,16 @@ class UserManagementTest extends TestCase
 
         $response = $this->put('/users/' . $user->id, [
             'name' => 'John Doe',
-            'email' => 'updated@mail.com']);
+            'email' => 'updated@mail.com'
+        ]);
 
-        $this->assertDatabaseHas('users', [
-            'id' => $user->id,
-            'name' => 'John Doe',
-            'email' => 'updated@mail.com']
+        $this->assertDatabaseHas(
+            'users',
+            [
+                'id' => $user->id,
+                'name' => 'John Doe',
+                'email' => 'updated@mail.com'
+            ]
         );
 
         $response->assertStatus(302);
