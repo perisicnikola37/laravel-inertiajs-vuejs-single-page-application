@@ -2,7 +2,6 @@ FROM php:8.2-cli
 
 WORKDIR /var/www/html
 
-# Install system dependencies
 RUN apt-get update && apt-get install -y \
     curl \
     libpng-dev \
@@ -15,29 +14,27 @@ RUN apt-get update && apt-get install -y \
     npm \
     && rm -rf /var/lib/apt/lists/*
 
-# Install PHP extensions
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd pdo pdo_mysql zip
 
-# Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Copy composer files and install dependencies
 COPY composer.json composer.lock ./
 RUN composer install --no-scripts --no-autoloader
 
-# Copy the rest of the application files
 COPY . .
 
-# Generate autoload files
+RUN npm install
+RUN npm run build
+
 RUN composer dump-autoload
 
-# Install npm packages and build
-RUN npm install && npm run build
+RUN php artisan storage:link
 
-# Expose ports for both PHP and npm servers
-EXPOSE 9000
-EXPOSE 5173
+RUN php artisan key:generate
 
-# Set up command to run both services
-CMD php artisan serve --host=0.0.0.0 --port=9000 & npm run dev --host 0.0.0.0 --port 5173
+# Expose ports for PHP server and frontend
+EXPOSE 9000 3000
+
+# Set up command to run both PHP server and frontend
+CMD php artisan serve --host=0.0.0.0 --port=9000 & npm run dev -- --host
